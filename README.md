@@ -19,3 +19,10 @@ I want to be able to add my property
 As a user,
 so I can manage my bookings
 I want to be able to login and view my upcoming trips
+
+
+## Database setup
+- Using PSQL CREATE DATABASE "Makersbnb"
+- Using db/migrations 01_Create_User_Table.sql add "User" table to 'Makersbnb' database.
+- Using db/migrations 01_Create_Listings_Table.sql add "Listings" table to 'Makersbnb' database.
+

@@ -1,1 +1,1 @@
-CREATE TABLE User(id SERIAL PRIMARY KEY, name VARCHAR(60), email VARCHAR(60), password VARCHAR(20), mobile_number VARCHAR(11), profile_picture VARCHAR)
+CREATE TABLE "User" (id SERIAL PRIMARY KEY, name VARCHAR(60), email VARCHAR(60), password VARCHAR(20), mobile_number VARCHAR(11), profile_picture VARCHAR)

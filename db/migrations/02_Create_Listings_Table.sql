@@ -1,0 +1,1 @@
+CREATE TABLE "Listings" (id SERIAL PRIMARY KEY, property_name VARCHAR(60), address_line_1 VARCHAR, county VARCHAR, post_code VARCHAR(9), total_occupancy INT, total_bedrooms INT, total_bathrooms INT, summary VARCHAR, price INT, host_id INT, picture_url VARCHAR)

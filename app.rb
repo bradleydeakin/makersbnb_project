@@ -7,7 +7,7 @@ class Makersbnb < Sinatra::Base
     end
 
     get '/' do
-        'hello world'
+        'home page branch'
     end
 
     run! if app_file == $0

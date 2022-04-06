@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require_relative 'lib/listings'
 
 class Makersbnb < Sinatra::Base
     configure :development do
@@ -7,8 +8,14 @@ class Makersbnb < Sinatra::Base
     end
 
     get '/' do
-        'home page branch'
+        @property_listings = Listings.all
+     erb:home
     end
 
+    # test login route
+    get '/login' do
+    erb:login
+    end
+    
     run! if app_file == $0
 end

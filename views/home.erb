@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="<%= url('/home_css.css') %>" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1> Makers BnB </h1>
+<h2> Your next trip awaits </h2>
+
+<h4> Most Popular Properties </h4>
+
+
+<div class=row>
+<% @property_listings.first(3).each do | property | %>
+  <div class=column>
+  <img width="300px" height="300px" src= <%= property.picture_url %>
+  </div>
+  <% end %>
+</div>
+
+
+
+<form action="/login" method="get">
+<button> Login </button>
+</form>
+</body>
+</html>
+
+

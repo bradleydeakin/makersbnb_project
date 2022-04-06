@@ -13,15 +13,17 @@
 <div class=row>
 <% @property_listings.first(3).each do | property | %>
   <div class=column>
-  <img width="300px" height="300px" src= <%= property.picture_url %>
+  <img width="300px" height="300px" src= <%= property['picture_url'] %>
   </div>
   <% end %>
 </div>
 
-
-
 <form action="/login" method="get">
-<button> Login </button>
+	<button> Login </button>
+</form>
+<br>
+<form action="/listings" method="get">
+	<button> View All Properties </button>
 </form>
 </body>
 </html>

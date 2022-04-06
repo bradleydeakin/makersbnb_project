@@ -1,0 +1,9 @@
+
+.img_container{
+	display: flex;
+	justify-content: center;
+}
+.img_item{
+	width:33.33%;
+	padding: 5px;
+}

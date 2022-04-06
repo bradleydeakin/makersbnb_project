@@ -27,12 +27,19 @@
           1,
           1,
           null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
           null,
           null,
           null,
           null,
-          null,
-          null,
+          1,
+          0,
+          0,
           null,
           null,
           1,
@@ -74,6 +81,32 @@
           0,
           0,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -86,7 +119,7 @@
           1,
           1,
           null,
-          1,
+          0,
           null,
           null
         ]
@@ -100,8 +133,23 @@
           null,
           null
         ]
+      },
+      "/Users/laurenprendergast/Makers/makersbnb_project/spec/login_integration_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1649175944
+    "timestamp": 1649248026
   }
 }

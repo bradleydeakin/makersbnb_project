@@ -4,6 +4,8 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 
+require_relative './setup_test_database'
+
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
   # Want a nice code coverage website? Uncomment this next line!
@@ -18,11 +20,11 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 Capybara.app = Makersbnb
 
-# RSpec.configure do |config|
-#   config.before(:each) do
-#     # test_data_script
-#   end
-# end
+RSpec.configure do |config|
+  config.before(:each) do
+    test_data_script
+  end
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

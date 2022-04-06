@@ -3,7 +3,7 @@ feature "login" do
 		visit '/login' 
 		fill_in :email, with: "email_address"
 		fill_in :password, with: "password"
-		click_button "Login"
+		click_on "Login"
 
     expect(page).to have_content "email_address"
 	end

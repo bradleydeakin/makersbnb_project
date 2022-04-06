@@ -13,9 +13,9 @@ class User
 	end
 
   def self.all
-    connection = PG.connect(dbname: 'Makersbnb')
+    connection = PG.connect(dbname: 'Makersbnb_test')
 
-    result = connection.exec('SELECT * FROM "User"').to_a
+    result = connection.exec("SELECT * FROM 'guest_profiles';").to_a
     result.map do | user_hash |
       User.new(
         user_hash['id'],
@@ -27,12 +27,14 @@ class User
     end
   end
 
-  def self.auth
-    # @user_email = "lauren@makers.tech"
-    # @user_password = "qwerty"
-    # if User.all[:email] == @user_email && User.all[:password] == @user_password
-    #   return true
-    # method to see if instance variables that contain form params match database?
-    # end
+  def self.email
+		all_users = User.all
+		all_users.map { |user| user.email }
+	end
+
+  def self.gets_user(email, password)
+    connection = PG.connect(dbname: 'Makersbnb_test')
+    result = connection.exec("SELECT * FROM 'guest_profiles' WHERE email = '#{email}' AND WHERE password = '#{password}';").to_a
   end
+
 end

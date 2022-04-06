@@ -34,7 +34,7 @@ class User
 
   def self.gets_user(email, password)
     connection = PG.connect(dbname: 'Makersbnb_test')
-    result = connection.exec("SELECT * FROM 'guest_profiles' WHERE email = '#{email}' AND WHERE password = '#{password}';").to_a
+    result = connection.exec("SELECT * FROM 'guest_profiles', WHERE email = '#{email}' AND WHERE password = '#{password}';").to_a
   end
 
 end

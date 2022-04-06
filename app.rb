@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/user.rb'
 
+require_relative 'lib/listings'
 
 class Makersbnb < Sinatra::Base
   configure :development do
@@ -11,7 +12,8 @@ class Makersbnb < Sinatra::Base
   enable :sessions
 
   get '/' do
-    'home page branch'
+    @property_listings = Listings.all
+    erb:home
   end
 
   get '/login' do
@@ -29,7 +31,6 @@ class Makersbnb < Sinatra::Base
       session[:name] = guest.first["name"]
       redirect '/listings'
     end
-      # need to work out how to check params against database
   end
 
   get '/listings'do

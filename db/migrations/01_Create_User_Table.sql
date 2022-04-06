@@ -1,1 +1,0 @@
-CREATE TABLE guest_profiles (id SERIAL PRIMARY KEY, name VARCHAR(60), email VARCHAR(60), password VARCHAR(20), mobile_number VARCHAR(11), profile_picture VARCHAR)

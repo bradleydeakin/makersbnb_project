@@ -13,9 +13,9 @@ class User
 	end
 
   def self.all
-    connection = PG.connect(dbname: 'Makersbnb_test')
+    connection = PG.connect(dbname: 'makersbnb')
 
-    result = connection.exec("SELECT * FROM 'guest_profiles';").to_a
+    result = connection.exec("SELECT * FROM guest_profiles;").to_a
     result.map do | user_hash |
       User.new(
         user_hash['id'],
@@ -33,8 +33,8 @@ class User
 	end
 
   def self.gets_user(email, password)
-    connection = PG.connect(dbname: 'Makersbnb_test')
-    result = connection.exec("SELECT * FROM 'guest_profiles', WHERE email = '#{email}' AND WHERE password = '#{password}';").to_a
+    connection = PG.connect(dbname: 'makersbnb')
+    result = connection.exec("SELECT * FROM guest_profiles WHERE email = '#{email}' AND password = '#{password}';").to_a
   end
 
 end

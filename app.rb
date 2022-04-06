@@ -27,9 +27,11 @@ class Makersbnb < Sinatra::Base
     guest = User.gets_user(email, password)
     if guest == []
       redirect '/login'
+        # possibly redirect to new route containing options to login again or sign up or view listings???
     else
       session[:name] = guest.first["name"]
       redirect '/listings'
+
     end
   end
 

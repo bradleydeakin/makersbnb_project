@@ -20,8 +20,8 @@ class Listings
   end
 
   def self.all
-    connection=PG.connect(dbname:'Makersbnb')
-    result = connection.exec('SELECT * FROM Listings;').to_a
+    connection=PG.connect(dbname:'makersbnb')
+    result = connection.exec('SELECT * FROM listings;').to_a
     result.map do | property |
       Listings.new(
         property['id'], 

@@ -29,7 +29,7 @@ class Makersbnb < Sinatra::Base
       redirect '/login'
         # possibly redirect to new route containing options to login again or sign up or view listings???
     else
-      session[:name] = guest.first["name"]
+      session[:name] = guest.first
       redirect '/listings'
 
     end
@@ -37,7 +37,20 @@ class Makersbnb < Sinatra::Base
 
   get '/listings'do
    @guest_name = session[:name]
+   @property_listings = Listings.all
+  
    erb :listings
+  end
+
+  get '/property_details' do 
+    p params[:property_id]
+  end
+
+
+
+  post '/account' do
+    p params[:guest_email]
+    # erb :account
   end
 
   run! if app_file == $0

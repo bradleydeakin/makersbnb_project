@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/laurenprendergast/Makers/makersbnb_project/app.rb": {
+      "/Users/cherellewilson/Projects/makersbnb_project/app.rb": {
         "lines": [
           1,
           1,
@@ -33,21 +33,27 @@
           2,
           1,
           null,
+          null,
           1,
           1,
           null,
           null,
           null,
+          null,
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          0,
           null,
           null,
           1,
           null
         ]
       },
-      "/Users/laurenprendergast/Makers/makersbnb_project/lib/user.rb": {
+      "/Users/cherellewilson/Projects/makersbnb_project/lib/user.rb": {
         "lines": [
           1,
           null,
@@ -91,7 +97,7 @@
           null
         ]
       },
-      "/Users/laurenprendergast/Makers/makersbnb_project/lib/listings.rb": {
+      "/Users/cherellewilson/Projects/makersbnb_project/lib/listings.rb": {
         "lines": [
           1,
           null,
@@ -134,12 +140,16 @@
           null,
           null,
           null,
-          0,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
       },
-      "/Users/laurenprendergast/Makers/makersbnb_project/spec/features/login_spec.rb": {
+      "/Users/cherellewilson/Projects/makersbnb_project/spec/features/login_spec.rb": {
         "lines": [
           1,
           1,
@@ -169,7 +179,7 @@
           null
         ]
       },
-      "/Users/laurenprendergast/Makers/makersbnb_project/spec/home_spec.rb": {
+      "/Users/cherellewilson/Projects/makersbnb_project/spec/home_spec.rb": {
         "lines": [
           1,
           1,
@@ -181,7 +191,26 @@
           null
         ]
       },
-      "/Users/laurenprendergast/Makers/makersbnb_project/spec/login_integration_spec.rb": {
+      "/Users/cherellewilson/Projects/makersbnb_project/spec/listing_integration_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/cherellewilson/Projects/makersbnb_project/spec/login_integration_spec.rb": {
         "lines": [
           1,
           null,
@@ -197,6 +226,6 @@
         ]
       }
     },
-    "timestamp": 1649262029
+    "timestamp": 1649325778
   }
 }

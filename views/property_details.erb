@@ -1,0 +1,11 @@
+<h1> <%= @property.first["property_name"]%> </h1>
+<% address = '#{@property.first["address_line_1"]}, #{@property.first["county"]}, #{@property.first["post_code"]}'%>
+<h2> <%= @property.first["address_line_1"] %>, <%= @property.first["county"] %> <%= @property.first["post_code"] %></h2>
+
+<img src= <%= @property.first["picture_url"]%> >
+
+<h3> Total Occupancy: <%= @property.first["total_occupancy"]%> | Total Bedrooms: <%= @property.first["total_bedrooms"]%> | Total Bathrooms: <%= @property.first["total_bathrooms"]%> </h3>
+
+<p> <%= @property.first["summary"]%> </p>
+
+<h2> Price per night: £<%= @property.first["price"]%> </h2>

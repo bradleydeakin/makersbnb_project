@@ -40,5 +40,10 @@ class Makersbnb < Sinatra::Base
    erb :listings
   end
 
+	get '/property_details' do
+		@property = Listings.gets_listing("1")
+    erb :property_details
+	end
+
   run! if app_file == $0
 end

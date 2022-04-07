@@ -38,7 +38,12 @@ class Listings
         property['picture_url']
       )
     end
+  end
 
-    p result
+  def self.gets_listing(property_id)
+    connection=PG.connect(dbname:'makersbnb')
+    property_id = property_id.to_i
+    result = connection.exec("SELECT * FROM listings WHERE id = '#{property_id}';").to_a
+
   end
 end

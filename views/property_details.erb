@@ -1,0 +1,24 @@
+<h1> <%= @property.first.property_name%> </h1>
+
+<h2> <%= @property.first.address_line_1 %>, <%= @property.first.county %> <%= @property.first.post_code %></h2>
+
+<img src= <%= @property.first.picture_url%> >
+
+<h3> Total Occupancy: <%= @property.first.total_occupancy%> | Total Bedrooms: <%= @property.first.total_bedrooms%> | Total Bathrooms: <%= @property.first.total_bathrooms%> </h3>
+
+<p> <%= @property.first.summary%> </p>
+
+<h2> Price per night: £<%= @property.first.price%> </h2>
+
+<form action="/booking_confirmation" method="post">
+  <label>
+    Check-in Date:
+    <input type='date' id='start' name='check_in' value='2022-04-07' min='2022-01-01' max='2022-12-31' />
+  </label>
+  <label>
+    Check-out Date:
+    <input type='date' id='end' name='check_out' value='2022-04-10' min='2022-01-01' max='2022-12-31' />
+  </label>
+<input type='submit' value='Book My Trip' />
+</form>
+

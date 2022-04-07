@@ -38,19 +38,30 @@ class Makersbnb < Sinatra::Base
   get '/listings'do
    @guest_name = session[:name]
    @property_listings = Listings.all
-  
+  p @property_listings
+  p @guest_name
    erb :listings
   end
 
-  get '/property_details' do 
+	get '/property_details' do
+    id = params[:property_id].to_i
+		@property = Listings.gets_listing(id)
     p params[:property_id]
-  end
-
-
+    p @property
+    erb :property_details
+	end
 
   post '/account' do
     p params[:guest_email]
     # erb :account
+  end
+
+  post '/booking_confirmation' do
+    @check_in = params[:check_in]
+    @check_out = params[:check_out]
+    p @check_in 
+    p @check_out
+    erb :booking_confirmation
   end
 
   run! if app_file == $0

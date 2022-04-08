@@ -20,7 +20,11 @@ class Listings
   end
 
   def self.all
-    connection=PG.connect(dbname:'makersbnb')
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else 
+    connection = PG.connect(dbname: 'makersbnb')
+    end
     result = connection.exec('SELECT * FROM listings;').to_a
     result.map do | property |
       Listings.new(
@@ -41,7 +45,11 @@ class Listings
   end
 
   def self.gets_listing(property_id)
-    connection=PG.connect(dbname:'makersbnb')
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else 
+    connection = PG.connect(dbname: 'makersbnb')
+    end
     result = connection.exec("SELECT * FROM listings WHERE id = '#{property_id}';").to_a
     result.map do | property |
       Listings.new(

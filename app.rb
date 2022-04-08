@@ -41,6 +41,19 @@ class Makersbnb < Sinatra::Base
    erb :listings
   end
 
+  get '/account' do
+    p params[:guest_email]
+    erb :account
+  end
+
+  post '/my-trips' do 
+    erb :my_trips
+  end 
+
+  post '/update-details' do 
+    erb :update_details
+  end 
+
 	get '/property_details' do
     id = params[:property_id].to_i
 		@property = Listings.gets_listing(id)
@@ -49,8 +62,20 @@ class Makersbnb < Sinatra::Base
     erb :property_details
 	end
 
-  post '/account' do
-    # erb :account
+
+  post '/booking_confirmation' do
+    id = params[:property_id].to_i
+    @property = Listings.gets_listing(id)
+    @check_in = Formatter.format(params[:check_in])
+    @check_out = Formatter.format(params[:check_out])
+    @total_days = Formatter.calculate_no_of_days(params[:check_in], params[:check_out])
+    @total_price = Formatter.total_price(@property.first.price, @total_days)
+    erb :booking_confirmation
+  end
+
+  post '/confirm_booking' do
+    # save all params from form add them to reservations table
+    redirect '/account'
   end
 
   post '/booking_confirmation' do

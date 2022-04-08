@@ -1,2 +1,17 @@
-<h1> Check-in Date: <%= @check_in %> </h1>
-<h1> Check-out Date: <%= @check_out %> </h1>
+<h1> <%= @property.first.property_name %> </h1>
+<h4> <%= @property.first.county %> <%= @property.first.post_code %> </h4>
+
+<h2> Check-in Date: <%= @check_in %>  |  Check-out Date: <%= @check_out %></h2>
+
+<h1> Total Price: £<%= @total_price %> </h1><h2> Based on <%= @total_days %> nights at £<%= @property.first.price %> per night</h2>
+
+<form action='/confirm_booking' method='post'>
+  <input type="hidden" name="property_id" value="<%= @property.first.id %>" />
+  <input type="submit" name="booking" value="Confirm Booking" />
+</form>
+
+<form action="/property_details">
+  <input type="hidden" name="property_id" value="<%= @property.first.id %>" />
+	<button> Back to Property Details </button>
+</form>
+

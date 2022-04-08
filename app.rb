@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require './lib/user.rb'
-
+require_relative 'lib/user'
+require_relative 'lib/formatter'
 require_relative 'lib/listings'
 
 class Makersbnb < Sinatra::Base
@@ -29,39 +29,43 @@ class Makersbnb < Sinatra::Base
       redirect '/login'
         # possibly redirect to new route containing options to login again or sign up or view listings???
     else
-      session[:name] = guest.first
+      session[:name] = guest.first["name"]
       redirect '/listings'
-
     end
   end
 
   get '/listings'do
    @guest_name = session[:name]
    @property_listings = Listings.all
-  p @property_listings
-  p @guest_name
+
    erb :listings
   end
 
 	get '/property_details' do
     id = params[:property_id].to_i
 		@property = Listings.gets_listing(id)
-    p params[:property_id]
-    p @property
+    @today = Formatter.date_today
+    @tomorrow = Formatter.date_tomorrow
     erb :property_details
 	end
 
   post '/account' do
-    p params[:guest_email]
     # erb :account
   end
 
   post '/booking_confirmation' do
-    @check_in = params[:check_in]
-    @check_out = params[:check_out]
-    p @check_in 
-    p @check_out
+    id = params[:property_id].to_i
+    @property = Listings.gets_listing(id)
+    @check_in = Formatter.format(params[:check_in])
+    @check_out = Formatter.format(params[:check_out])
+    @total_days = Formatter.calculate_no_of_days(params[:check_in], params[:check_out])
+    @total_price = Formatter.total_price(@property.first.price, @total_days)
     erb :booking_confirmation
+  end
+
+  post '/confirm_booking' do
+    # save all params from form add them to reservations table
+    redirect '/account'
   end
 
   run! if app_file == $0

@@ -1,12 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bradleydeakin/projects/makersbnb_project/app.rb": {
+      "/Users/laurenprendergast/Makers/makersbnb_project/app.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
+          1,
           1,
           null,
           1,
@@ -39,7 +39,6 @@
           null,
           null,
           null,
-          null,
           1,
           2,
           2,
@@ -49,16 +48,28 @@
           null,
           1,
           0,
+          0,
+          0,
+          0,
+          0,
           null,
+          null,
+          1,
           null,
           null,
           null,
           1,
           0,
-          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           1,
+          null,
           0,
           null,
           null,
@@ -66,11 +77,7 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/Users/cherellewilson/Projects/makersbnb_project/lib/user.rb": {
-=======
-      "/Users/bradleydeakin/projects/makersbnb_project/lib/user.rb": {
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+      "/Users/laurenprendergast/Makers/makersbnb_project/lib/user.rb": {
         "lines": [
           1,
           null,
@@ -114,11 +121,49 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/Users/cherellewilson/Projects/makersbnb_project/lib/listings.rb": {
-=======
-      "/Users/bradleydeakin/projects/makersbnb_project/lib/listings.rb": {
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+      "/Users/laurenprendergast/Makers/makersbnb_project/lib/formatter.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/laurenprendergast/Makers/makersbnb_project/lib/listings.rb": {
         "lines": [
           1,
           null,
@@ -127,18 +172,18 @@
           null,
           1,
           null,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
           null,
           null,
           1,
@@ -161,24 +206,31 @@
           null,
           null,
           null,
-<<<<<<< HEAD
           null,
           1,
           1,
           1,
+          1,
+          1,
           null,
-=======
-          3,
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
       },
-<<<<<<< HEAD
-      "/Users/cherellewilson/Projects/makersbnb_project/spec/features/login_spec.rb": {
-=======
-      "/Users/bradleydeakin/projects/makersbnb_project/spec/features/login_spec.rb": {
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+      "/Users/laurenprendergast/Makers/makersbnb_project/spec/features/login_spec.rb": {
         "lines": [
           1,
           1,
@@ -208,10 +260,7 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/Users/cherellewilson/Projects/makersbnb_project/spec/home_spec.rb": {
-=======
-      "/Users/bradleydeakin/projects/makersbnb_project/spec/features/view_all_listings_page_spec.rb": {
+      "/Users/laurenprendergast/Makers/makersbnb_project/spec/features/view_all_listings_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -226,8 +275,7 @@
           null
         ]
       },
-      "/Users/bradleydeakin/projects/makersbnb_project/spec/home_spec.rb": {
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+      "/Users/laurenprendergast/Makers/makersbnb_project/spec/home_spec.rb": {
         "lines": [
           1,
           1,
@@ -239,11 +287,7 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/Users/cherellewilson/Projects/makersbnb_project/spec/listing_integration_spec.rb": {
-=======
-      "/Users/bradleydeakin/projects/makersbnb_project/spec/listings_class_spec.rb": {
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+      "/Users/laurenprendergast/Makers/makersbnb_project/spec/listing_integration_spec.rb": {
         "lines": [
           1,
           1,
@@ -251,32 +295,40 @@
           1,
           1,
           1,
-<<<<<<< HEAD
-          1,
-=======
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
-          null,
-          1,
-          1,
-          1,
-<<<<<<< HEAD
-=======
-          null,
           1,
           null,
           1,
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+          1,
+          1,
           1,
           1,
           null,
           null
         ]
       },
-<<<<<<< HEAD
-      "/Users/cherellewilson/Projects/makersbnb_project/spec/login_integration_spec.rb": {
-=======
-      "/Users/bradleydeakin/projects/makersbnb_project/spec/login_integration_spec.rb": {
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+      "/Users/laurenprendergast/Makers/makersbnb_project/spec/listings_class_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/laurenprendergast/Makers/makersbnb_project/spec/login_integration_spec.rb": {
         "lines": [
           1,
           null,
@@ -292,10 +344,6 @@
         ]
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1649325778
-=======
-    "timestamp": 1649337852
->>>>>>> 4f47363a8f5e90d999bd5d4b07f152416133528e
+    "timestamp": 1649409874
   }
 }

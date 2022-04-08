@@ -12,7 +12,7 @@ RSpec.describe '.all' do
     properties = Listings.all
 
     expect(properties.length).to eq 5
-    expect(properties[0]['property_name']).to eq 'Beach House'
-    expect(properties[0]['price']).to eq '80'
+    expect(properties[0].property_name).to eq 'Beach House'
+    expect(properties[0].price).to eq '80'
   end
 end

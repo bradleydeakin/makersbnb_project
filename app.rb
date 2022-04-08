@@ -78,5 +78,20 @@ class Makersbnb < Sinatra::Base
     redirect '/account'
   end
 
+  post '/booking_confirmation' do
+    id = params[:property_id].to_i
+    @property = Listings.gets_listing(id)
+    @check_in = Formatter.format(params[:check_in])
+    @check_out = Formatter.format(params[:check_out])
+    @total_days = Formatter.calculate_no_of_days(params[:check_in], params[:check_out])
+    @total_price = Formatter.total_price(@property.first.price, @total_days)
+    erb :booking_confirmation
+  end
+
+  post '/confirm_booking' do
+    # save all params from form add them to reservations table
+    redirect '/account'
+  end
+
   run! if app_file == $0
 end

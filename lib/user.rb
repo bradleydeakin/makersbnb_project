@@ -36,7 +36,11 @@ class User
 	end
 
   def self.gets_user(email, password)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else 
     connection = PG.connect(dbname: 'makersbnb')
+    end
     result = connection.exec("SELECT * FROM guest_profiles WHERE email = '#{email}' AND password = '#{password}';").to_a
   end
 

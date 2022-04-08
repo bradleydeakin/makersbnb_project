@@ -1,5 +1,5 @@
 <% if @guest_name  %>
-<h1>Hello, <%= @guest_name['name'] %></h1>
+<h1>Hello, <%= @guest_name %></h1>
 <form action='/account' method='post'>
     <input type='hidden' name='guest_email' value= <%= @guest_name['email'] %> />
     <input type='submit' value='Manage account'/>
@@ -8,13 +8,13 @@
 <h2>All Properties</h2>
 <br>
 <br>
-<div class=row>
+<div class= row>
 <% @property_listings.each do | property | %>   
     <img width="100px" height="100px" src= <%= property.picture_url %> />
-    <p><%= property.property_name %></p>
-    <p>£<%= property.price %> /per-night</p>
-    <p>location <%= property.county %></p>
-    <p>max guests <%= property.total_occupancy %></p>
+    <h3><%= property.property_name %></h3>
+    <p>£<%= property.price %> /per night</p>
+    <p>Location: <%= property.county %></p>
+    <p>Max Guests: <%= property.total_occupancy %></p>
     
     <form action='/property_details' >
         <input type='hidden' name="property_id" value= <%=property.id %> />

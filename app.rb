@@ -47,10 +47,17 @@ class Makersbnb < Sinatra::Base
   end
 
 
-
   post '/account' do
     p params[:guest_email]
-    # erb :account
+    erb :account
+  end
+
+  post '/my-trips' do 
+    erb :my_trips
+  end 
+
+  post '/update-details' do 
+    erb :update_details
   end
 
   run! if app_file == $0
